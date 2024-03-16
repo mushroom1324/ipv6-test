@@ -13,16 +13,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: test ipv4
-        uses: appleboy/ssh-action@master
-        with:
-          host: 52.78.103.215
-          username: ubuntu
-          key: ${{ secrets.KEY }}
-          port: 22
-          script: |
-            whoami
-            
       - name: test ipv6
         uses: appleboy/ssh-action@master
         with:
