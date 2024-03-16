@@ -19,6 +19,7 @@ jobs:
           host: 2406:da12:1e4:25bd:83ab:8252:23a:6a2b
           username: ec2-user
           key: ${{ secrets.KEY }}
+          protocol: tcp6
           port: 22
           script: |
             whoami
