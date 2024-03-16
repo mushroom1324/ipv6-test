@@ -13,11 +13,21 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: ssh to EC2
+      - name: test ipv4
+        uses: appleboy/ssh-action@master
+        with:
+          host: 52.78.103.215
+          username: ubuntu
+          key: ${{ secrets.KEY }}
+          port: 22
+          script: |
+            whoami
+            
+      - name: test ipv6
         uses: appleboy/ssh-action@master
         with:
           host: 2406:da12:1e4:2596:67d4:870c:c78:c502
-          username: ec2-user
+          username: ubuntu
           key: ${{ secrets.KEY }}
           protocol: tcp6
           port: 22
