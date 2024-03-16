@@ -16,7 +16,7 @@ jobs:
       - name: ssh to EC2
         uses: appleboy/ssh-action@master
         with:
-          host: ${{ secrets.HOST }}
+          host: 2406:da12:1e4:25bd:83ab:8252:23a:6a2b
           username: ec2-user
           key: ${{ secrets.KEY }}
           port: 22
