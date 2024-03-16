@@ -26,7 +26,7 @@ jobs:
       - name: test ipv6
         uses: appleboy/ssh-action@master
         with:
-          host: 2406:da12:1e4:2596:67d4:870c:c78:c502
+          host: ${{ secrets.HOST }}
           username: ubuntu
           key: ${{ secrets.KEY }}
           protocol: tcp6
