@@ -30,6 +30,6 @@ jobs:
           username: ubuntu
           key: ${{ secrets.KEY }}
           protocol: tcp6
-          port: 2200
+          port: 22
           script: |
             whoami
